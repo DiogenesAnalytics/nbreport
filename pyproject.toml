@@ -8,6 +8,13 @@ authors = [
 license = "MIT"
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
+dependencies = [
+    "click>=8.0",
+    "nbconvert>=7.0",
+    "traitlets>=5.0",
+    "ipython>=8.0",
+    "ipynbname>=2021.3.2",
+]
 homepage = "https://github.com/DiogenesAnalytics/nbreport"
 repository = "https://github.com/DiogenesAnalytics/nbreport"
 classifiers = [
@@ -62,9 +69,9 @@ fail_under = 100
 [tool.isort]
 profile = "black"
 force_single_line = true
-lines_after_imports = 2
 
 [tool.mypy]
+ignore_missing_imports = true
 strict = true
 warn_unreachable = true
 pretty = true

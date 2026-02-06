@@ -11,7 +11,9 @@ import nox
 from packaging import version
 
 
-def parse_requires_python(requirement: str) -> Dict[str, Optional[version.Version]]:
+def parse_requires_python(
+    requirement: str,
+) -> Dict[str, Optional[version.Version]]:
     """Parses a `requires-python` string (e.g., ">=3.9,<3.13")."""
     # get regex
     pattern = r"([<>]=?)\s*(\d+\.\d+)"
